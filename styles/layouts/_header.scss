@@ -1,0 +1,82 @@
+.header {
+  position: relative;
+  background-color: $white;
+
+  .header-wrapper {
+    @include flexbox(between);
+    height: 50px;
+  }
+
+  h1 {
+    @include text-style(h4, $point);
+
+    span {
+      color: $black;
+    }
+  }
+
+  button {
+    width: 24px;
+    height: 24px;
+  }
+
+  .light-btn {
+    @include pos-center-x();
+  }
+
+  @include responsive(T) {
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+
+    .header-wrapper {
+      height: 80px;
+    }
+
+    h1 {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .header-nav-list {
+      @include flexbox();
+    }
+
+    .nav-list-item {
+      margin-right: 25px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        @include text-style(p);
+      }
+    }
+
+    .light-btn {
+      position: static;
+      transform: none;
+    }
+  }
+
+  @include responsive(D) {
+    .header-wrapper {
+      height: 100px;
+    }
+
+    h1 {
+      @include text-style(h2);
+    }
+
+    .nav-list-item {
+      margin-right: 38px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        @include text-style(h5);
+      }
+    }
+  }
+}
