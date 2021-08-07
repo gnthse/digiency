@@ -1,0 +1,72 @@
+@mixin text-style-h1 {
+  font-size: $font-size-h1;
+  font-weight: $font-weight-h1;
+}
+
+@mixin text-style-h2 {
+  font-size: $font-size-h2;
+  font-weight: $font-weight-h2;
+}
+
+@mixin text-style-h3 {
+  font-size: $font-size-h3;
+  font-weight: $font-weight-h3;
+}
+
+@mixin text-style-h4 {
+  font-size: $font-size-h4;
+  font-weight: $font-weight-h4;
+}
+
+@mixin text-style-h5 {
+  font-size: $font-size-h5;
+  font-weight: $font-weight-h5;
+}
+
+@mixin text-style-p {
+  font-size: $font-size-p;
+  font-weight: $font-weight-p;
+}
+
+@mixin text-style-h7 {
+  font-size: $font-size-h7;
+  font-weight: $font-weight-h7;
+}
+
+@mixin text-style($size, $color: false) {
+  font-family: $font-sub;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+
+  @if ($size == 'h1') {
+    @include text-style-h1();
+  }
+
+  @if ($size == 'h2') {
+    @include text-style-h2();
+  }
+
+  @if ($size == 'h3') {
+    @include text-style-h3();
+  }
+
+  @if ($size == 'h4') {
+    @include text-style-h4();
+  }
+
+  @if ($size == 'h5') {
+    @include text-style-h5();
+  }
+
+  @if ($size == 'p') {
+    @include text-style-p();
+  }
+
+  @if ($size == 'h7') {
+    @include text-style-h7();
+  }
+
+  @if (type-of($color) == color) {
+    color: $color;
+  }
+}
