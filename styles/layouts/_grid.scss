@@ -1,0 +1,84 @@
+/*
+* Mobile    <768px
+* fixture   sm
+* columns   4
+* gutter    10px
+* margin    11px
+*
+* Tablet    >=768px
+* fixture   md
+* columns   12
+* gutter    24px
+* margin    40px
+*
+* Desktop    >=1200px
+* fixture   lg
+* columns   12
+* gutter    30px
+* margin    auto
+* unit      70px
+* container-size    (unit + gutter) * columns
+*/
+
+$sm-column: 4;
+$sm-gutter: 10px;
+$sm-margin: 11px;
+
+$md-column: 12;
+$md-gutter: 24px;
+$md-margin: 40px;
+
+$lg-column: 12;
+$lg-gutter: 30px;
+$lg-unit: 70px;
+$lg-max-container: ($lg-unit + $lg-gutter) * $lg-column;
+
+.container {
+  width: 100%;
+  padding: 0 $sm-margin;
+  margin: 0 auto;
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  [class^='col-'] {
+    padding: 0 $sm-gutter / 2;
+  }
+
+  @for $i from 1 through $sm-column {
+    .col-sm-#{$i} {
+      width: percentage($i/$sm-column);
+    }
+  }
+
+  @include responsive(T) {
+    padding: 0 $md-margin;
+
+    [class^='col-'] {
+      padding: 0 $md-gutter / 2;
+    }
+
+    @for $i from 1 through $md-column {
+      .col-md-#{$i} {
+        width: percentage($i/$md-column);
+      }
+    }
+  }
+
+  @include responsive(D) {
+    max-width: ($lg-unit + $lg-gutter) * $lg-column;
+    padding: 0;
+
+    [class^='col-'] {
+      padding: 0 $lg-gutter / 2;
+    }
+
+    @for $i from 1 through $lg-column {
+      .col-lg-#{$i} {
+        width: ($lg-unit + $lg-gutter) * $i;
+      }
+    }
+  }
+}
