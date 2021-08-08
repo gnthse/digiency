@@ -1,0 +1,47 @@
+.our-experience {
+  background-color: $background-light;
+
+  .section-title {
+    @include text-style(h4);
+    max-width: 255px;
+  }
+
+  p {
+    max-width: 321px;
+  }
+
+  @include responsive(T) {
+    .row {
+      align-items: center;
+    }
+
+    .section-title {
+      @include text-style(h3);
+      max-width: 332px;
+    }
+
+    p {
+      max-width: 331px;
+    }
+
+    .our-group {
+      @include flexbox;
+      flex-wrap: wrap;
+    }
+  }
+
+  @include responsive(D) {
+    .section-title {
+      @include text-style(h2);
+      display: inline;
+    }
+
+    .section-title + p {
+      margin-top: 18px;
+    }
+
+    p {
+      max-width: 569px;
+    }
+  }
+}
