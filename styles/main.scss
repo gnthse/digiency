@@ -12,5 +12,9 @@
 @import './mixins/flexbox';
 @import './mixins/positions';
 
+@import './modules/buttons';
+@import './modules/section';
+
 @import './layouts/grid';
 @import './layouts/header';
+@import './layouts/hero';
