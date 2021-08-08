@@ -1,0 +1,39 @@
+.team-member {
+  .section-title {
+    @include text-style(h4);
+    max-width: 217px;
+  }
+
+  .member-group {
+    @include flexbox(start);
+    width: 100%;
+    height: 350px;
+    overflow-x: auto;
+  }
+
+  @include responsive(T) {
+    padding: 120px 0;
+    text-align: center;
+
+    .section-title {
+      @include text-style(h3);
+      max-width: 380px;
+      margin: 0 auto 60px;
+    }
+
+    .member-group {
+      height: 334px;
+    }
+  }
+
+  @include responsive(D) {
+    .section-title {
+      @include text-style(h2);
+      max-width: 470px;
+    }
+
+    .member-group {
+      height: 350px;
+    }
+  }
+}
