@@ -25,18 +25,18 @@
     text-align: left;
 
     .hero-wrapper {
+      align-items: flex-start;
       flex-direction: row;
     }
 
     .hero-text {
-      flex: 1;
       margin-right: 19px;
     }
 
     .section-title {
       @include text-style(h2);
       width: 100%;
-      min-width: 349px;
+      max-width: 349px;
     }
 
     p {
@@ -51,7 +51,7 @@
 
     .hero-img {
       height: 207px;
-      min-width: 307px;
+      max-width: 307px;
       margin: 16px 0 0;
       background-size: contain;
     }
@@ -72,8 +72,9 @@
 
     .section-title {
       @include text-style(h1);
-      width: 440px;
-      margin-bottom: 11px;
+      width: 450px;
+      max-width: none;
+      margin: 0 0 11px;
     }
 
     p {
@@ -84,12 +85,13 @@
 
     .hero-img {
       height: 429px;
+      max-width: 639px;
       margin-top: 0;
     }
 
     .hero-sns-group {
-      top: 50%;
-      transform: translateY(-50%);
+      top: 40%;
+      transform: translateY(-40%);
     }
   }
 }
