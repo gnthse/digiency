@@ -1,0 +1,38 @@
+%button-base {
+  @include flexbox;
+  @include text-style(h5, $white);
+  height: 50px;
+  background-color: #ff5300;
+  border-radius: 5px;
+  filter: drop-shadow(4px 5px 15px rgba(255, 83, 0, 0.4));
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-rect {
+  @extend %button-base;
+}
+
+%small-base {
+  @include flexbox;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  color: $point;
+  background-color: $white;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.small-btn {
+  @extend %small-base;
+  margin-bottom: 5px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.is-active {
+    color: $white;
+    background-color: $point;
+    box-shadow: 4px 5px 15px rgba(255, 83, 0, 0.4);
+  }
+}

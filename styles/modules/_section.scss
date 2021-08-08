@@ -1,0 +1,30 @@
+.section {
+  padding: 50px 0;
+  text-align: center;
+
+  .section-img {
+    margin-bottom: 50px;
+  }
+
+  .section-title {
+    margin-bottom: 18px;
+    color: $black;
+
+    span {
+      color: $point;
+    }
+  }
+
+  p {
+    @include text-style(p, $primary);
+    display: block;
+    width: 100%;
+    max-width: 323px;
+    margin: 0 auto 25px;
+  }
+
+  .btn-rect {
+    width: 150px;
+    margin: 0 auto;
+  }
+}
