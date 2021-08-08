@@ -6,6 +6,12 @@
     margin-bottom: 50px;
   }
 
+  .section-category {
+    @include text-style(p, $primary);
+    display: block;
+    margin-bottom: 18px;
+  }
+
   .section-title {
     margin-bottom: 18px;
     color: $black;
@@ -26,5 +32,28 @@
   .btn-rect {
     width: 150px;
     margin: 0 auto;
+  }
+
+  @include responsive(T) {
+    text-align: left;
+
+    .section-category {
+      margin-bottom: 18px;
+    }
+
+    p {
+      max-width: 332px;
+      margin: 0 0 25px;
+    }
+  }
+
+  @include responsive(D) {
+    .section-category {
+      margin-bottom: 25px;
+    }
+
+    p {
+      max-width: 569px;
+    }
   }
 }
