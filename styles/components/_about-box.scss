@@ -1,0 +1,79 @@
+%box-base {
+  @include column-flexbox;
+  height: 200px;
+  padding: 25px 0 18px;
+  background-color: $white;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+
+  .circle-btn {
+    @include flexbox;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 37px;
+    color: $white;
+    border-radius: 50%;
+
+    span {
+      font-size: 30px;
+    }
+  }
+
+  h3 {
+    @include text-style(h5, $black);
+    max-width: 258px;
+  }
+
+  @include responsive(T) {
+    padding: 35px 0 15px;
+
+    .circle-btn {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 25px;
+    }
+
+    h3 {
+      @include text-style(p);
+      max-width: 127px;
+      text-align: center;
+    }
+  }
+
+  @include responsive(D) {
+    padding: 25px 0 21px;
+
+    .circle-btn {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 36px;
+    }
+
+    h3 {
+      max-width: 206px;
+    }
+  }
+}
+
+.orange {
+  background-color: $point;
+  box-shadow: 4px 5px 15px rgba(255, 83, 0, 0.4);
+}
+
+.primary {
+  background-color: $primary;
+  box-shadow: 4px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.blue {
+  background-color: #00acff;
+  box-shadow: 4px 5px 15px rgba(0, 194, 255, 0.4);
+}
+
+.black {
+  background-color: $black;
+  box-shadow: 4px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.about-box {
+  @extend %box-base;
+}
