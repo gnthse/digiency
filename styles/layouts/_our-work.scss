@@ -1,0 +1,63 @@
+.our-work {
+  padding: 0 0 50px;
+
+  .section-title {
+    @include text-style(h4);
+    max-width: 280px;
+    margin-bottom: 25px;
+  }
+
+  .our-work-menu {
+    @include flexbox(start);
+    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    overflow-x: scroll;
+
+    button {
+      @include text-style(p, $primary);
+      margin-right: 18px;
+      white-space: nowrap;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.is-active {
+        color: $point;
+      }
+    }
+  }
+
+  @include responsive(T) {
+    text-align: center;
+
+    .section-title {
+      @include text-style(h3);
+      max-width: 420px;
+      margin: 0 auto 25px;
+    }
+
+    .our-work-menu {
+      justify-content: center;
+      margin-bottom: 60px;
+      overflow: hidden;
+
+      button {
+        @include text-style(h5);
+        margin-right: 43px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  @include responsive(D) {
+    .section-title {
+      @include text-style(h2);
+      max-width: none;
+    }
+  }
+}

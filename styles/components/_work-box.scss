@@ -1,0 +1,46 @@
+.work-box-group {
+  width: 100%;
+
+  .work-box {
+    @include flexbox;
+    width: 100%;
+    margin-bottom: 25px;
+    filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.1));
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @include responsive(T) {
+    @include flexbox(between, stretch);
+    flex-wrap: wrap;
+
+    .work-box {
+      max-width: 213px;
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .work-box:nth-child(1),
+    .work-box:nth-child(2),
+    .work-box:nth-child(3) {
+      align-self: flex-start;
+    }
+  }
+
+  @include responsive(D) {
+    .work-box {
+      max-width: 370px;
+      margin-bottom: 0;
+    }
+  }
+}
