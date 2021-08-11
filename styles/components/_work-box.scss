@@ -18,29 +18,32 @@
   }
 
   @include responsive(T) {
-    @include flexbox(between, stretch);
+    @include flexbox(between, end);
     flex-wrap: wrap;
 
     .work-box {
       max-width: 213px;
-      margin-bottom: 24px;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
+      margin-bottom: 0;
     }
 
     .work-box:nth-child(1),
     .work-box:nth-child(2),
     .work-box:nth-child(3) {
       align-self: flex-start;
+      margin-bottom: -25px;
     }
   }
 
   @include responsive(D) {
     .work-box {
       max-width: 370px;
-      margin-bottom: 0;
+    }
+
+    .work-box:nth-child(1),
+    .work-box:nth-child(2),
+    .work-box:nth-child(3) {
+      align-self: flex-start;
+      margin-bottom: -60px;
     }
   }
 }
