@@ -9,6 +9,7 @@
     width: 100%;
     height: 350px;
     overflow-x: auto;
+    overflow-y: hidden;
   }
 
   @include responsive(T) {
