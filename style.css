@@ -817,7 +817,11 @@ ol {
         width: 1200px; } }
 
 .header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
   background-color: #fff; }
   .header .header-wrapper {
     display: flex;
@@ -887,6 +891,7 @@ ol {
 
 .hero {
   position: relative;
+  padding-top: 100px;
   background-color: #fff7f4; }
   .hero .hero-wrapper {
     display: flex;
@@ -908,7 +913,7 @@ ol {
     background-size: contain; }
   @media screen and (min-width: 768px) {
     .hero {
-      padding: 73px 0;
+      padding: 153px 0 73px;
       text-align: left; }
       .hero .hero-wrapper {
         align-items: flex-start;
@@ -936,11 +941,12 @@ ol {
         background-size: contain; }
       .hero .sns-group {
         position: absolute;
-        top: 59px;
-        right: 0; } }
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%); } }
   @media screen and (min-width: 1200px) {
     .hero {
-      padding: 153px 0; }
+      padding: 253px 0 153px; }
       .hero .hero-text {
         margin-right: 35px; }
       .hero .section-title {
@@ -1185,6 +1191,7 @@ ol {
     font-size: 16px;
     font-weight: 400;
     color: #fff;
+    min-width: 343px;
     margin: 0 0 18px; }
   .footer .sns-group {
     display: flex;
@@ -1267,7 +1274,7 @@ ol {
       padding-top: 60px; }
       .footer .footer-wrapper {
         display: flex;
-        align-items: flex-start;
+        align-items: stretch;
         justify-content: flex-start;
         margin-bottom: 60px; }
       .footer .footer-wrapper > div {
@@ -1278,18 +1285,45 @@ ol {
         letter-spacing: 0;
         font-size: 25px;
         font-weight: 500; }
-      .footer ul li {
-        margin-bottom: 1px; }
-        .footer ul li:last-child {
+      .footer .company-group,
+      .footer .service-group,
+      .footer .news-letter {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 173px; }
+      .footer p {
+        min-width: 155px;
+        margin-bottom: 0; }
+      .footer ul {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%; }
+        .footer ul li {
           margin-bottom: 0; }
-      .footer .news-letter p {
-        margin-bottom: 5px; }
-      .footer .news-letter form {
-        height: 40px; }
-        .footer .news-letter form button {
-          min-width: 35px;
-          font-size: 18px; }
+      .footer .news-letter {
+        justify-content: space-between;
+        max-height: 179px; }
+        .footer .news-letter form {
+          height: 40px; }
+          .footer .news-letter form input {
+            font-family: "Work Sans", sans-serif;
+            line-height: 123.6%;
+            letter-spacing: 0;
+            font-size: 12.8px;
+            font-weight: 400;
+            padding: 5px; }
+          .footer .news-letter form button {
+            min-width: 35px;
+            font-size: 18px; }
       .footer .logo-group {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: space-between;
         margin-right: 23px; }
         .footer .logo-group .sns-group {
           margin-bottom: 0; }
@@ -1307,5 +1341,64 @@ ol {
         margin-right: 33px; }
       .footer .copy-text strong {
         max-width: none; } }
+  @media screen and (min-width: 1200px) {
+    .footer {
+      padding-top: 66px; }
+      .footer .section-title {
+        font-family: "Work Sans", sans-serif;
+        line-height: 123.6%;
+        letter-spacing: 0;
+        font-size: 39.06px;
+        font-weight: 600;
+        margin-bottom: 25px; }
+      .footer p {
+        max-width: 263px;
+        min-width: 263px; }
+      .footer .logo-group,
+      .footer .company-group,
+      .footer .service-group,
+      .footer .news-letter {
+        max-height: none;
+        min-height: 235px; }
+      .footer .logo-group {
+        margin-right: 37px; }
+        .footer .logo-group .small-btn {
+          width: 40px;
+          height: 40px;
+          margin-right: 27px;
+          font-size: 24px; }
+          .footer .logo-group .small-btn:last-child {
+            margin-right: 0; }
+          .footer .logo-group .small-btn.is-active {
+            box-shadow: none; }
+      .footer .company-group {
+        margin-right: 120px; }
+      .footer .service-group {
+        margin-right: 156px; }
+      .footer .news-letter form {
+        height: 60px; }
+        .footer .news-letter form input {
+          font-family: "Work Sans", sans-serif;
+          line-height: 123.6%;
+          letter-spacing: 0;
+          font-size: 16px;
+          font-weight: 400;
+          padding: 18px; }
+        .footer .news-letter form button {
+          width: 81px;
+          font-size: 24px; }
+      .footer .copy-right {
+        padding: 0 180px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+        .footer .copy-right button {
+          width: 50px;
+          height: 50px;
+          font-size: 33px;
+          color: #fff; } }
+
+body {
+  position: relative; }
 
 /*# sourceMappingURL=style.css.map */

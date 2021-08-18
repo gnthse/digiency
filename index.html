@@ -336,11 +336,16 @@
           <div class="col-sm-4">
             <div class="footer-wrapper">
               <div class="logo-group">
-                <h3 class="section-title"><span>Digie</span>ncy</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="md-hidden"> Felis, cursus egestas etiam posuere vitae cursus consectetur eu. Cursus vitae porttitor libero est posuere.</span></p>
+                <div class="logo-text">
+                  <h3 class="section-title"><span>Digie</span>ncy</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="sm-only"> Felis, cursus egestas etiam posuere vitae cursus consectetur eu. Cursus vitae porttitor libero est posuere.</span><span class="lg-only"> Sit a laoreet libero dis eget maecenas bibendum.</span></p>
+                </div>
                 
                 <div class="sns-group">
-                  <a class="small-btn" href="#">
+                  <a class="small-btn lg-hidden" href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a class="small-btn is-active lg-only" href="#">
                     <i class="fab fa-facebook-f"></i>
                   </a>
                   <a class="small-btn" href="#">
@@ -378,8 +383,12 @@
               </div>
 
               <div class="news-letter">
-                <h3 class="section-title">Newsletter</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="md-hidden"> Arcu feugiat in mollis augue vel aliquam. Ut faucibus elit, libero varius. </span></p>
+                <div class="news-text">
+                  <h3 class="section-title">Newsletter</h3>
+                  <p class="sm-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu feugiat in mollis augue vel aliquam. Ut faucibus elit, libero varius. </p>
+                  <p class="md-only">Lorem ipsum dolor sitamet,consectetur adipiscing elit.</p>
+                  <p class="lg-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem eget varius viverra in.</p>
+                </div>
                 <form action="#">
                   <input type="email" placeholder="info@gmail.com" required>
                   <button type="submit">
@@ -400,9 +409,6 @@
           <strong>Copyright 2021. All Right Reserved
             By Ojjomedia</strong>
         </div>
-          <button class="lg-only" type="button">
-            <i class="fas fa-arrow-up"></i>
-          </button>
       </div>
 
     </footer>

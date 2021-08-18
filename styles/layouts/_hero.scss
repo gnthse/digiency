@@ -1,5 +1,6 @@
 .hero {
   position: relative;
+  padding-top: 100px;
   background-color: $background-light;
 
   .hero-wrapper {
@@ -21,7 +22,7 @@
   }
 
   @include responsive(T) {
-    padding: 73px 0;
+    padding: 153px 0 73px;
     text-align: left;
 
     .hero-wrapper {
@@ -58,13 +59,14 @@
 
     .sns-group {
       position: absolute;
-      top: 59px;
+      top: 50%;
       right: 0;
+      transform: translateY(-50%);
     }
   }
 
   @include responsive(D) {
-    padding: 153px 0;
+    padding: 253px 0 153px;
 
     .hero-text {
       margin-right: 35px;
